@@ -37,6 +37,7 @@ dependencies {
     implementation "com.airbnb.android:lottie:$lottie_version"
     implementation "com.intuit.sdp:sdp-android:$sdp_version"
     implementation "com.intuit.ssp:ssp-android:$ssp_version"
+    implementation "me.dm7.barcodescanner:zxing:$barcode_zxing_version"
 
     // Testing
     debugImplementation "androidx.fragment:fragment-testing:$fragment_version"

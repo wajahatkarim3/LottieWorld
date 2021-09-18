@@ -14,4 +14,9 @@
         android:name="com.wajahatkarim3.lottieworld.ui.explore.ExploreFragment"
         android:label="@string/explore_str" />
 
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.wajahatkarim3.lottieworld.ui.scan.ScanFragment"
+        android:label="@string/scan_str" />
+
 </navigation>

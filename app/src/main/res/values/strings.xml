@@ -14,4 +14,5 @@
     <string name="featured_animations_str">Featured</string>
     <string name="popular_str">Popular</string>
     <string name="recent_str">Recent</string>
+    <string name="permissions_not_granted_str">Permissions not granted by the user.</string>
 </resources>
