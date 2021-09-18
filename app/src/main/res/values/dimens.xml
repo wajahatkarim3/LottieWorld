@@ -14,4 +14,7 @@
     <dimen name="alpha_emphasis_high">@dimen/material_emphasis_high_type</dimen>
     <dimen name="alpha_emphasis_medium">@dimen/material_emphasis_medium</dimen>
     <dimen name="alpha_emphasis_disabled">@dimen/material_emphasis_disabled</dimen>
+
+    <!-- Other Dimensions -->
+    <dimen name="newsImageSize">@dimen/_60sdp</dimen>
 </resources>

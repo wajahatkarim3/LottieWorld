@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/exploreFragment"
+        android:title="@string/explore_str"
+        android:icon="@drawable/ic_explore"/>
+
+    <item android:id="@+id/newsFragment"
+        android:title="@string/news_str"
+        android:icon="@drawable/ic_news"/>
+
+    <item android:id="@+id/scanFragment"
+        android:title="@string/scan_str"
+        android:icon="@drawable/ic_scan"/>
+
+    <item android:id="@+id/favoritesFragment"
+        android:title="@string/favorites_str"
+        android:icon="@drawable/ic_baseline_favorite_24"/>
+
+    <item android:id="@+id/profileFragment"
+        android:title="@string/profile_str"
+        android:icon="@drawable/ic_baseline_person_24"/>
+</menu>

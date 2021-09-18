@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LottieWorld</string>
+    <string name="explore_str">Explore</string>
+    <string name="news_str">News</string>
+    <string name="scan_str">Scan</string>
+    <string name="favorites_str">Favorites</string>
+    <string name="profile_str">Profile</string>
+    <string name="back_to_exit_message">Press BACK again to exit</string>
+    <string name="something_went_wrong_str">Something went wrong...</string>
+    <string name="txt_retry_subheading_str">An alien is probably blocking your signal.</string>
+    <string name="message_no_network_connected_str">No Internet Available</string>
+    <string name="retry">Retry</string>
 </resources>

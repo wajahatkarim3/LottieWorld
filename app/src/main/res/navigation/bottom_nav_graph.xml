@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav_graph.xml"
+    app:startDestination="@id/newsFragment">
+
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.wajahatkarim3.lottieworld.ui.news.NewsFragment"
+        android:label="@string/news_str" />
+
+</navigation>

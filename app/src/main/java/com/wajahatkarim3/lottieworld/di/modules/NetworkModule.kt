@@ -1,11 +1,14 @@
 package com.wajahatkarim3.lottieworld.di.modules
 
+import android.content.Context
 import com.wajahatkarim3.lottieworld.common.SecureKeys
 import com.wajahatkarim3.lottieworld.data.remote.LottieFilesApiService
-import com.wajahatkarim3.lottieworld.data.remote.api_response.ApiResponseCallAdapterFactory
+import com.wajahatkarim3.lottieworld.data.remote.interceptors.NoConnectionInterceptor
+import com.wajahatkarim3.lottieworld.utils.StringUtils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -23,12 +26,13 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun providesOkHttpClient(): OkHttpClient {
+    fun providesOkHttpClient(@ApplicationContext context: Context): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
 
         return OkHttpClient.Builder()
             .addInterceptor(logging)
+            .addInterceptor(NoConnectionInterceptor(context))
             .build()
     }
 
@@ -39,7 +43,6 @@ class NetworkModule {
             .baseUrl(SecureKeys.baseUrl())
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(ApiResponseCallAdapterFactory())
             .build()
     }
 
@@ -47,5 +50,11 @@ class NetworkModule {
     @Provides
     fun providesGithubApiService(retrofit: Retrofit): LottieFilesApiService {
         return retrofit.create(LottieFilesApiService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideStringUtils(@ApplicationContext context: Context): StringUtils {
+        return StringUtils(context)
     }
 }

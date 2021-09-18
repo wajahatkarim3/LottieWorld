@@ -15,7 +15,7 @@
     <!--LIGHT COLOR THEME-->
 
     <!-- Material Colors -->
-    <color name="color_primary">@color/light_green</color>
+    <color name="color_primary">#0FCCCE</color>
     <color name="color_primary_dark">#326735</color>
     <color name="color_on_primary">#EFEFEF</color>
     <color name="color_secondary">#CDDC39</color>
@@ -29,8 +29,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="loading_gray">#CCCCCC</color>
+    <color name="color_icon_gray">#A3A3A3</color>
     <color name="text_normal">#676767</color>
     <color name="text_emphasized">#393939</color>
-    <color name="light_green">#73A676</color>
-    <color name="dark_green">#73A676</color>
+    <color name="light_green">#8EE193</color>
+    <color name="dark_green">#3F7342</color>
 </resources>

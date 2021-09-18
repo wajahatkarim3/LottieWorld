@@ -2,6 +2,7 @@ package com.wajahatkarim3.lottieworld.data.remote.responses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import com.wajahatkarim3.lottieworld.data.model.BlogModel
 
 data class LoadBlogsResponse(
     @Expose @SerializedName("data")
@@ -20,11 +21,5 @@ data class BlogsData(
     @Expose val from: Int,
     @Expose val to: Int,
     @Expose val total: Int,
-    @Expose val results: BlogResponse
-)
-
-data class BlogResponse(
-    @Expose val title: String,
-    @Expose val postedAt: String,
-    @Expose val imageUrl: String
+    @Expose val results: List<BlogModel>
 )
