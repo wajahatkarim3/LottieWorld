@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--DARK COLOR THEME-->
+    <!--The same color values are defined for dark theme, but with values more appropriate for -->
+    <!--low-luminance UIs. These colors will be used by night/themes.xml.-->
+
+    <!-- Material Colors -->
+    <color name="color_primary">@color/light_green</color>
+    <color name="color_primary_dark">#326735</color>
+    <color name="color_on_primary">#EFEFEF</color>
+    <color name="color_secondary">#CDDC39</color>
+    <color name="color_secondary_dark">#B2BF30</color>
+    <color name="color_on_secondary">#2C2C2C</color>
+    <color name="color_background">#F7F7F7</color>
+    <color name="color_on_background">#E1E1E1</color>
+    <color name="color_error">#AC0000</color>
+
+    <!-- Colors for App -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="loading_gray">#3C3C3C</color>
+    <color name="text_normal">#ACACAC</color>
+    <color name="text_emphasized">#FFFFFF</color>
+    <color name="light_green">#A3E1A7</color>
+    <color name="dark_green">#50E859</color>
+</resources>

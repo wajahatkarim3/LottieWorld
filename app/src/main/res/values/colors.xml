@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!--Color-->
+
+    <!--Material uses an organized approach to applying color by providing a set of attributes -->
+    <!--which define the color of generalized UI elements such as backgrounds, surfaces, type -->
+    <!--and icons. Using these attributes throughout your app makes it easy to change a single -->
+    <!--color, or the entire theme, and have those changes cascade through the interface.-->
+
+    <!--Color is customized by overriding Material Components color attributes with custom -->
+    <!--color values. In this project, your theme’s color attributes are already overridden -->
+    <!--with default values defined in this file, color.xml.  Change any of the values in -->
+    <!--this file to see changes applied across all elements of your app.-->
+
+    <!--LIGHT COLOR THEME-->
+
+    <!-- Material Colors -->
+    <color name="color_primary">@color/light_green</color>
+    <color name="color_primary_dark">#326735</color>
+    <color name="color_on_primary">#EFEFEF</color>
+    <color name="color_secondary">#CDDC39</color>
+    <color name="color_secondary_dark">#B2BF30</color>
+    <color name="color_on_secondary">#2C2C2C</color>
+    <color name="color_background">#F7F7F7</color>
+    <color name="color_on_background">#4C4C4C</color>
+    <color name="color_error">#AC0000</color>
+
+    <!-- Colors for App -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="loading_gray">#CCCCCC</color>
+    <color name="text_normal">#676767</color>
+    <color name="text_emphasized">#393939</color>
+    <color name="light_green">#73A676</color>
+    <color name="dark_green">#73A676</color>
 </resources>
