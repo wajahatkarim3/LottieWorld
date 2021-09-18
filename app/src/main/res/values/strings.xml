@@ -10,4 +10,8 @@
     <string name="txt_retry_subheading_str">An alien is probably blocking your signal.</string>
     <string name="message_no_network_connected_str">No Internet Available</string>
     <string name="retry">Retry</string>
+    <string name="featured_animators_str">Top Animators</string>
+    <string name="featured_animations_str">Featured</string>
+    <string name="popular_str">Popular</string>
+    <string name="recent_str">Recent</string>
 </resources>

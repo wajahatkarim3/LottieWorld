@@ -2,12 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_nav_graph.xml"
-    app:startDestination="@id/newsFragment">
-
+    app:startDestination="@id/exploreFragment">
 
     <fragment
         android:id="@+id/newsFragment"
         android:name="com.wajahatkarim3.lottieworld.ui.news.NewsFragment"
         android:label="@string/news_str" />
+
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.wajahatkarim3.lottieworld.ui.explore.ExploreFragment"
+        android:label="@string/explore_str" />
 
 </navigation>

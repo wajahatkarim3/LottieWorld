@@ -17,4 +17,8 @@
 
     <!-- Other Dimensions -->
     <dimen name="newsImageSize">@dimen/_60sdp</dimen>
+    <dimen name="avatarImageSize">@dimen/_40sdp</dimen>
+    <dimen name="miniAvatarImageSize">@dimen/_13sdp</dimen>
+    <dimen name="likeImageSize">@dimen/_35sdp</dimen>
+    <dimen name="animationSize">@dimen/_120sdp</dimen>
 </resources>

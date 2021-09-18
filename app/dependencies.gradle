@@ -32,6 +32,7 @@ dependencies {
 
     // Third-party
     implementation "io.coil-kt:coil:$coil_version"
+    implementation "io.coil-kt:coil-gif:$coil_version"
     implementation "com.facebook.shimmer:shimmer:$shimmer_version"
     implementation "com.airbnb.android:lottie:$lottie_version"
     implementation "com.intuit.sdp:sdp-android:$sdp_version"

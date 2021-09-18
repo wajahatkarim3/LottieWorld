@@ -1,10 +1,11 @@
 package com.wajahatkarim3.lottieworld.utils
 
+import android.app.Activity
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-fun AppCompatActivity.showToast(message: String) {
+fun Activity.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 

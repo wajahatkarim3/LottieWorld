@@ -29,12 +29,6 @@ class NewsViewModel @Inject constructor(
     fun loadNews() {
         viewModelScope.launch {
             loadAllBlogsUseCase.invoke(Unit).collect { dataResource ->
-
-                var a = 0
-                a++
-                a++
-                a++
-
                 dataResource.onSuccess {
                     _blogsList.value = this.data!!
                     _uiState.value = ContentState
