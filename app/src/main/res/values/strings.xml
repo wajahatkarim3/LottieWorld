@@ -15,4 +15,6 @@
     <string name="popular_str">Popular</string>
     <string name="recent_str">Recent</string>
     <string name="permissions_not_granted_str">Permissions not granted by the user.</string>
+    <string name="no_news_str">No news posted yet!</string>
+    <string name="double_tap_anim_str">Double tap on any animation to add in favorites.</string>
 </resources>

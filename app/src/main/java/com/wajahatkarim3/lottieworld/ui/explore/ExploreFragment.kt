@@ -52,21 +52,21 @@ class ExploreFragment: BaseFragment() {
         }
 
         // Featured
-        featuredAdapter = AnimationsAdapter(::onAnimationClick)
+        featuredAdapter = AnimationsAdapter(::onAnimationClick, ::onAnimationLiked)
         bi.recyclerFeaturedAnimations.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = featuredAdapter
         }
 
         // Recent
-        recentAdapter = AnimationsAdapter(::onAnimationClick)
+        recentAdapter = AnimationsAdapter(::onAnimationClick, ::onAnimationLiked)
         bi.recyclerRecentAnimations.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = recentAdapter
         }
 
         // Popular
-        popularAdapter = AnimationsAdapter(::onAnimationClick)
+        popularAdapter = AnimationsAdapter(::onAnimationClick, ::onAnimationLiked)
         bi.recyclerPopularAnimations.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = popularAdapter
@@ -229,5 +229,9 @@ class ExploreFragment: BaseFragment() {
 
     fun onAnimationClick(animation: AnimationModel) {
 
+    }
+
+    fun onAnimationLiked(animation: AnimationModel) {
+        viewModel.addToFavorite(animation)
     }
 }

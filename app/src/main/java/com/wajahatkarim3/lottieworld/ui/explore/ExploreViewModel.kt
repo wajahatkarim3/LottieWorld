@@ -10,6 +10,7 @@ import com.wajahatkarim3.lottieworld.data.onEmpty
 import com.wajahatkarim3.lottieworld.data.onError
 import com.wajahatkarim3.lottieworld.data.onLoading
 import com.wajahatkarim3.lottieworld.data.onSuccess
+import com.wajahatkarim3.lottieworld.data.usecases.AddAnimationToFavoriteUseCase
 import com.wajahatkarim3.lottieworld.data.usecases.FetchAnimationsUseCase
 import com.wajahatkarim3.lottieworld.data.usecases.FetchFeaturedAnimatorsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,7 +22,8 @@ import javax.inject.Inject
 @HiltViewModel
 class ExploreViewModel @Inject constructor(
     private val featuredAnimatorsUseCase: FetchFeaturedAnimatorsUseCase,
-    private val animationsUseCase: FetchAnimationsUseCase
+    private val animationsUseCase: FetchAnimationsUseCase,
+    private val addAnimationToFavoriteUseCase: AddAnimationToFavoriteUseCase
 ): ViewModel() {
 
     private val _uiAnimatorsState = MutableLiveData<BaseUIState>()
@@ -132,5 +134,13 @@ class ExploreViewModel @Inject constructor(
         loadFeaturedAnimations()
         loadPopularAnimations()
         loadRecentAnimations()
+    }
+
+    fun addToFavorite(animation: AnimationModel) {
+        viewModelScope.launch {
+            addAnimationToFavoriteUseCase.invoke(animation).collect {
+
+            }
+        }
     }
 }

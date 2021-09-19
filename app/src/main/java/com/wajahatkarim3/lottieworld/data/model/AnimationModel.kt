@@ -1,9 +1,13 @@
 package com.wajahatkarim3.lottieworld.data.model
 
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 
+@Entity
 data class AnimationModel(
-    @Expose val id: Long,
+    @PrimaryKey @Expose val id: Long,
     @Expose val bgColor: String,
     @Expose val lottieUrl: String,
     @Expose val gifUrl: String? = null,
@@ -11,6 +15,8 @@ data class AnimationModel(
     @Expose val imageUrl: String,
     @Expose val createdAt: String,
     @Expose val name: String,
+
+    @field:Embedded
     @Expose val createdBy: AnimatorModel
 )
 

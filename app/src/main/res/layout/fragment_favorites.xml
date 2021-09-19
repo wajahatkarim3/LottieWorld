@@ -6,12 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerNews"
+        android:id="@+id/recyclerAnims"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="5"
-        tools:listitem="@layout/item_news_layout" />
+        tools:listitem="@layout/item_favorite_anim_layout" />
 
     <include
         android:id="@+id/layoutShimmerLoading"

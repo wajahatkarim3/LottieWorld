@@ -1,5 +1,6 @@
 package com.wajahatkarim3.lottieworld.di.modules
 
+import com.wajahatkarim3.lottieworld.data.local.AnimationsDao
 import com.wajahatkarim3.lottieworld.data.remote.LottieFilesApiService
 import com.wajahatkarim3.lottieworld.data.repository.AnimationsRepository
 import com.wajahatkarim3.lottieworld.data.repository.DefaultAnimationsRepository
@@ -30,10 +31,12 @@ class RepositoryModule {
     @ViewModelScoped
     @Provides
     fun provideAnimationsRepository(
-        apiService: LottieFilesApiService
+        apiService: LottieFilesApiService,
+        animationsDao: AnimationsDao
     ): AnimationsRepository {
         return DefaultAnimationsRepository(
             apiService,
+            animationsDao,
             Dispatchers.IO
         )
     }
