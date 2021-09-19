@@ -19,7 +19,7 @@ interface AnimationsRepository {
     fun loadAllFavoriteAnimations(): Flow<DataResource<List<AnimationModel>>>
 }
 
-class DefaultAnimationsRepository@Inject constructor(
+class DefaultAnimationsRepository @Inject constructor(
     private val apiService: LottieFilesApiService,
     private val animationsDao: AnimationsDao,
     val dispatcher: CoroutineDispatcher = Dispatchers.IO
