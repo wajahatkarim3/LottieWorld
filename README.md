@@ -9,6 +9,9 @@ A Lottie animations playground app to mess around with animations and clean arch
 </div>
 <br/>
 
+## Video
+https://github.com/wajahatkarim3/LottieWorld/blob/main/art/LottieWorld.mp4
+
 <div align="center">
   <img src="/art/Explore-Light.png" width="230px" />  <img src="/art/News-Light.png" width="230px" />  <img src="/art/Animation-Light.png" width="230px" /> <br>
   <img src="/art/Explore-Dark.png" width="230px" />  <img src="/art/Profile-Dark.png" width="230px" />  <img src="/art/Login-Dark.png" width="230px" /> <br>
