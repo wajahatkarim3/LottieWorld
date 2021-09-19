@@ -24,4 +24,5 @@
     <color name="text_emphasized">#FFFFFF</color>
     <color name="light_green">#A3E1A7</color>
     <color name="dark_green">#50E859</color>
+    <color name="color_logout">#EC5C5C</color>
 </resources>

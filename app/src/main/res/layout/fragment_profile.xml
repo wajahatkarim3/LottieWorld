@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/keyline_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupLoggedIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="gone"
+            app:constraint_referenced_ids="imgAvatar, txtName, txtUserName, btnEditProfile, lblAnimations, txtMyAnimations, txtLikedAnimations, lblPreferences, txtDarkMode, txtSignout, viewDividerLine"/>
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="@dimen/largeAvatarImageSize"
+            android:layout_height="@dimen/largeAvatarImageSize"
+            android:layout_marginTop="@dimen/keyline_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@tools:sample/backgrounds/scenic" />
+
+        <TextView android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/keyline_4"
+            android:gravity="center"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:textColor="@color/text_emphasized"
+            tools:text="@tools:sample/full_names"/>
+
+        <TextView android:id="@+id/txtUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/keyline_1"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/text_normal"
+            tools:text="@tools:sample/full_names"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/color_primary"
+            android:textColor="@color/color_primary"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/keyline_5"
+            android:paddingStart="@dimen/keyline_2"
+            android:paddingEnd="@dimen/keyline_2"
+            android:text="@string/edit_profile_str"/>
+
+        <View android:id="@+id/viewDividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            app:layout_constraintTop_toBottomOf="@+id/btnEditProfile"
+            android:layout_marginTop="@dimen/keyline_4"
+            android:background="@color/loading_gray"/>
+
+        <TextView android:id="@+id/lblAnimations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animations_str"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/keyline_4"
+            app:layout_constraintTop_toBottomOf="@+id/viewDividerLine"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView android:id="@+id/txtMyAnimations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_animations_str"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/lblAnimations"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/keyline_2"
+            android:paddingTop="@dimen/keyline_2"
+            android:paddingBottom="@dimen/keyline_2"
+            android:paddingEnd="@dimen/keyline_2"
+            android:drawablePadding="@dimen/keyline_2"
+            app:drawableStartCompat="@drawable/ic_baseline_edit_24" />
+
+        <TextView android:id="@+id/txtLikedAnimations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/liked_animations_str"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txtMyAnimations"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/keyline_2"
+            android:paddingTop="@dimen/keyline_2"
+            android:paddingBottom="@dimen/keyline_2"
+            android:paddingEnd="@dimen/keyline_2"
+            android:drawablePadding="@dimen/keyline_2"
+            app:drawableStartCompat="@drawable/ic_baseline_favorite_24" />
+
+        <TextView android:id="@+id/lblPreferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preferences_str"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/keyline_5"
+            app:layout_constraintTop_toBottomOf="@+id/txtLikedAnimations"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView android:id="@+id/txtDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/day_night_mode_str"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/lblPreferences"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/keyline_2"
+            android:paddingTop="@dimen/keyline_2"
+            android:paddingBottom="@dimen/keyline_2"
+            android:paddingEnd="@dimen/keyline_2"
+            android:drawablePadding="@dimen/keyline_2"
+            app:drawableStartCompat="@drawable/ic_baseline_dark_mode_24" />
+
+        <TextView android:id="@+id/txtSignout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out_str"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txtDarkMode"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:textColor="@color/color_logout"
+            android:drawableTint="@color/color_logout"
+            android:layout_marginTop="@dimen/keyline_2"
+            android:paddingTop="@dimen/keyline_2"
+            android:paddingBottom="@dimen/keyline_2"
+            android:paddingEnd="@dimen/keyline_2"
+            android:drawablePadding="@dimen/keyline_2"
+            app:drawableStartCompat="@drawable/ic_baseline_logout_24" />
+
+        <include
+            android:id="@+id/layoutShimmerLoading"
+            layout="@layout/layout_profile_shimmer_loading"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layoutLogin"
+            layout="@layout/layout_login"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

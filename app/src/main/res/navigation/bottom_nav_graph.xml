@@ -24,4 +24,9 @@
         android:name="com.wajahatkarim3.lottieworld.ui.favorites.FavoritesFragment"
         android:label="@string/favorites_str" />
 
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wajahatkarim3.lottieworld.ui.profile.ProfileFragment"
+        android:label="@string/profile_str" />
+
 </navigation>

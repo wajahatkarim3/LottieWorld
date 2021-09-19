@@ -2,6 +2,7 @@ package com.wajahatkarim3.lottieworld.di.modules
 
 import com.wajahatkarim3.lottieworld.data.repository.AnimationsRepository
 import com.wajahatkarim3.lottieworld.data.repository.NewsRepository
+import com.wajahatkarim3.lottieworld.data.repository.UsersRepository
 import com.wajahatkarim3.lottieworld.data.usecases.*
 import dagger.Module
 import dagger.Provides
@@ -52,5 +53,29 @@ class UseCasesModule {
         repository: AnimationsRepository
     ): LoadAllFavoriteAnimationsUseCase {
         return LoadAllFavoriteAnimationsUseCase(repository, Dispatchers.IO)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideLoginUserUseCase(
+        repository: UsersRepository
+    ): LoginUserUserCase {
+        return LoginUserUserCase(repository, Dispatchers.IO)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideLogoutUserUseCase(
+        repository: UsersRepository
+    ): LogoutUserUserCase {
+        return LogoutUserUserCase(repository, Dispatchers.IO)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideLoadLoggedInUserUseCase(
+        repository: UsersRepository
+    ): LoadLoggedInUserUserCase {
+        return LoadLoggedInUserUserCase(repository, Dispatchers.IO)
     }
 }

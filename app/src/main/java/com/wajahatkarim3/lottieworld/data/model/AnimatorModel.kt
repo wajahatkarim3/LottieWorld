@@ -11,5 +11,7 @@ data class AnimatorModel(
 
     @ColumnInfo(name = "animatorName")
     val name: String,
-    val avatarUrl: String
+    val avatarUrl: String,
+
+    val username: String
 )

@@ -1,15 +1,15 @@
 package com.wajahatkarim3.lottieworld.di.modules
 
+import android.content.Context
 import com.wajahatkarim3.lottieworld.data.local.AnimationsDao
 import com.wajahatkarim3.lottieworld.data.remote.LottieFilesApiService
-import com.wajahatkarim3.lottieworld.data.repository.AnimationsRepository
-import com.wajahatkarim3.lottieworld.data.repository.DefaultAnimationsRepository
-import com.wajahatkarim3.lottieworld.data.repository.DefaultNewsRepository
-import com.wajahatkarim3.lottieworld.data.repository.NewsRepository
+import com.wajahatkarim3.lottieworld.data.repository.*
+import com.wajahatkarim3.lottieworld.utils.StringUtils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Dispatchers
 
@@ -38,6 +38,27 @@ class RepositoryModule {
             apiService,
             animationsDao,
             Dispatchers.IO
+        )
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun providePreferencesRepository(
+        @ApplicationContext context: Context
+    ): PreferencesRepository {
+        return DefaultPreferencesRepository(context)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideUsersRepository(
+        preferencesRepository: PreferencesRepository,
+        stringUtils: StringUtils
+    ): UsersRepository {
+        return DefaultUsersRepository(
+            Dispatchers.IO,
+            preferencesRepository,
+            stringUtils
         )
     }
 }

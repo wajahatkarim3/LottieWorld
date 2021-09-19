@@ -34,4 +34,5 @@
     <color name="text_emphasized">#393939</color>
     <color name="light_green">#8EE193</color>
     <color name="dark_green">#3F7342</color>
+    <color name="color_logout">#AC0000</color>
 </resources>

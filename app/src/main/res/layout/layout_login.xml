@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login_animation"
+        tools:layout_height="@dimen/_250sdp"
+        tools:background="@color/loading_gray"/>
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="@dimen/keyline_1"
+        android:textColor="@color/text_emphasized"
+        app:layout_constraintTop_toBottomOf="@+id/lottieLogin"
+        app:layout_constraintBottom_toTopOf="@+id/txtSubHeading"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="@string/thousands_of_lottie_animations"/>
+
+    <TextView
+        android:id="@+id/txtSubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/keyline_5"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        android:paddingStart="@dimen/keyline_4"
+        android:paddingEnd="@dimen/keyline_4"
+        android:gravity="center"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/text_normal"
+        android:text="@string/from_top_creators_message_str" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/login_str"
+        app:strokeColor="@color/color_primary"
+        android:textColor="@color/color_on_primary"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubHeading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

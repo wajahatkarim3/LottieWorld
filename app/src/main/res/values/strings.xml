@@ -17,4 +17,15 @@
     <string name="permissions_not_granted_str">Permissions not granted by the user.</string>
     <string name="no_news_str">No news posted yet!</string>
     <string name="double_tap_anim_str">Double tap on any animation to add in favorites.</string>
+    <string name="edit_profile_str">Edit Profile</string>
+    <string name="animations_str">Animations</string>
+    <string name="my_animations_str">My Animations</string>
+    <string name="liked_animations_str">Liked Animations</string>
+    <string name="day_night_mode_str">Day Night Mode</string>
+    <string name="preferences_str">Preferences</string>
+    <string name="sign_out_str">Sign out</string>
+    <string name="user_is_logged_out">"User has been logged out. "</string>
+    <string name="thousands_of_lottie_animations">1000s of Lottie animations</string>
+    <string name="from_top_creators_message_str">from top creators waiting to be discover, save and share from the palm of your hand</string>
+    <string name="login_str">Login</string>
 </resources>
