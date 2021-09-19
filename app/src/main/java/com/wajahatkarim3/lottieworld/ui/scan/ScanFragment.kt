@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import com.google.zxing.Result
 import com.wajahatkarim3.lottieworld.R
 import com.wajahatkarim3.lottieworld.base.BaseFragment
+import com.wajahatkarim3.lottieworld.data.model.AnimationModel
 import com.wajahatkarim3.lottieworld.utils.showToast
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 
@@ -50,10 +53,14 @@ class ScanFragment: BaseFragment(), ZXingScannerView.ResultHandler {
     }
 
     override fun handleResult(rawResult: Result) {
-        activity?.showToast(rawResult.getText())
+        val lottieUrl = rawResult.text
+        if (lottieUrl != null) {
+            val bundle = bundleOf(AnimationModel.LOTTIE_URL_KEY to lottieUrl)
+            findNavController().navigate(R.id.action_scanFragment_to_animationDetailsFragment, bundle)
+        } else {
+            scannerView.resumeCameraPreview(this)
+        }
 
-        // If you would like to resume scanning, call this method below:
-        scannerView.resumeCameraPreview(this)
     }
 
     override fun onResume() {

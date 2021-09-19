@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupAnimDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="lottieAnim, imgPlayPause, seekBarAnimation, txtName, txtCreatorName, imgAvatar, fabLike, fabShare"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="@color/loading_gray"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPlayPause"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/keyline_4"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24"
+        />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBarAnimation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/imgPlayPause"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPlayPause"
+        app:layout_constraintStart_toEndOf="@+id/imgPlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/keyline_1"
+        android:layout_marginEnd="@dimen/keyline_2"/>
+
+    <TextView android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlayPause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/keyline_5"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textColor="@color/text_emphasized"
+        tools:text="@tools:sample/full_names"/>
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="@dimen/avatarImageSize"
+        android:layout_height="@dimen/avatarImageSize"
+        android:layout_marginTop="@dimen/keyline_4"
+        android:layout_marginStart="@dimen/keyline_1"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        tools:background="@tools:sample/backgrounds/scenic" />
+
+    <TextView android:id="@+id/txtCreatorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatar"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/text_normal"
+        tools:text="@tools:sample/full_names"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_favorite_24"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:layout_marginEnd="@dimen/keyline_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_share_24"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:layout_marginEnd="@dimen/keyline_4"
+        app:layout_constraintEnd_toStartOf="@+id/fabLike"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/layoutShimmerLoading"
+        layout="@layout/layout_anim_details_shimmer_loading"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

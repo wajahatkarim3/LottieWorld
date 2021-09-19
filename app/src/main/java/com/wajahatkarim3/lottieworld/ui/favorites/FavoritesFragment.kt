@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wajahatkarim3.lottieworld.R
@@ -94,6 +96,7 @@ class FavoritesFragment: BaseFragment() {
     }
 
     fun onAnimationClick(animation: AnimationModel) {
-
+        val bundle = bundleOf(AnimationModel.PARCEL_KEY to animation)
+        findNavController().navigate(R.id.action_favoritesFragment_to_animationDetailsFragment, bundle)
     }
 }

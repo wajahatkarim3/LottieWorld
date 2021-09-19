@@ -1,10 +1,13 @@
 package com.wajahatkarim3.lottieworld.data.model
 
+import android.os.Parcelable
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity
 data class AnimationModel(
     @PrimaryKey @Expose val id: Long,
@@ -18,7 +21,13 @@ data class AnimationModel(
 
     @field:Embedded
     @Expose val createdBy: AnimatorModel
-)
+): Parcelable {
+
+    companion object {
+        const val PARCEL_KEY = "animationModelKey"
+        const val LOTTIE_URL_KEY = "lottieUrlKey"
+    }
+}
 
 sealed class AnimationType
 object ANIMATION_TYPE_NONE: AnimationType()

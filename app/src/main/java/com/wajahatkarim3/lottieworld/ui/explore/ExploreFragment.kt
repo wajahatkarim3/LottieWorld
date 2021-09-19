@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.wajahatkarim3.lottieworld.R
 import com.wajahatkarim3.lottieworld.adapters.AnimationsAdapter
 import com.wajahatkarim3.lottieworld.adapters.AnimatorsAdapter
 import com.wajahatkarim3.lottieworld.base.*
@@ -14,7 +17,6 @@ import com.wajahatkarim3.lottieworld.data.model.AnimationModel
 import com.wajahatkarim3.lottieworld.databinding.FragmentExploreBinding
 import com.wajahatkarim3.lottieworld.utils.gone
 import com.wajahatkarim3.lottieworld.utils.show
-import com.wajahatkarim3.lottieworld.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -228,7 +230,8 @@ class ExploreFragment: BaseFragment() {
     }
 
     fun onAnimationClick(animation: AnimationModel) {
-
+        val bundle = bundleOf(AnimationModel.PARCEL_KEY to animation)
+        findNavController().navigate(R.id.action_exploreFragment_to_animationDetailsFragment, bundle)
     }
 
     fun onAnimationLiked(animation: AnimationModel) {
